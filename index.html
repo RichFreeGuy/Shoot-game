@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Shooter Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hud">Press 'WASD' to Move | Click to Shoot</div>
+    <div id="healthBar"></div>
+    <div id="ammoCounter">Ammo: 30</div>
+    <div id="score">Score: 0</div>
+    <button id="startButton">Click to Start</button>
+    <script type="module" src="game.js"></script>
+    <script>
+        document.getElementById('startButton').addEventListener('click', function() {
+            document.body.requestPointerLock();
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
